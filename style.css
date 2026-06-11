@@ -30,7 +30,7 @@ body{
 .sidebar{
     width:380px;
     min-width:380px;
-    background:#ffffff;
+    background: linear-gradient(60deg, #E3F2FD, #E3F2FD, #7BA6F7);
     padding:20px;
     overflow-y:auto;
     border-right:1px solid #e5e7eb;
@@ -85,7 +85,8 @@ body{
 .search-section input{
     width:100%;
     padding:12px 14px;
-    border:2px solid #d1d5db;
+    border:2px solid #4A90E2;
+    box-shadow: 1px 1px 5px #4A90E2;
     border-radius:10px;
     font-size:14px;
     outline:none;
@@ -162,6 +163,40 @@ body{
     border-radius:12px;
     cursor:pointer;
     transition:0.2s;
+}
+
+.car-color {
+    background: linear-gradient(135deg, #7BA6F7, #A3B9F7);
+    color: #fff;
+}
+
+.motorcycle-color {
+    background: linear-gradient(135deg, #FF9AA2, #FFD1DC);
+    color: #fff;
+}
+
+.bicycle-color {
+    background: linear-gradient(135deg, #9EE493, #CFFFD0);
+    color: #fff
+}
+
+.walking-color {
+    background: linear-gradient(135deg, #FFD97D, #FFF3B0);
+    color: #fff;
+}
+
+.fastest-color {
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
+    color: #fff;
+}
+
+.cheapest-color {
+    background: linear-gradient(135deg, #FFB347, #FFD93D);
+    color: #fff;
+}
+
+.text-color {
+    font-weight: bold;
 }
 
 .vehicle-card:hover{
@@ -278,7 +313,7 @@ body{
     padding:14px;
     border:none;
     border-radius:10px;
-    background:#00a884;
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
     color:white;
     font-size:15px;
     font-weight:600;
@@ -296,7 +331,7 @@ body{
     padding:14px;
     border:none;
     border-radius:10px;
-    background:#ef4444;
+    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
     color:white;
     font-size:15px;
     font-weight:600;

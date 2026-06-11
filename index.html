@@ -15,6 +15,11 @@
     <link rel="stylesheet"
         href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,7 +32,7 @@
         <aside class="sidebar">
 
             <div class="logo-section">
-                <h2>🚌 Transit Route Optimizer</h2>
+                <h2>🗺️ Transit Route Optimizer</h2>
                 <p class="subtitle">
                     Nationwide Road Routing for the Philippines
                 </p>
@@ -80,7 +85,7 @@
             <div class="vehicle-panel">
 
                 <div
-                    class="vehicle-card active"
+                    class="vehicle-card active car-color"
                     data-vehicle="car">
 
                     <div class="vehicle-icon">
@@ -89,22 +94,52 @@
 
                     <div>
                         <h4>Car</h4>
-                        <p>Standard Driving</p>
+                        <p class="text-color">Standard Driving</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="vehicle-card"
+                    class="vehicle-card motorcycle-color"
                     data-vehicle="motorcycle">
 
                     <div class="vehicle-icon">
-                        🏍
+                        🛵
                     </div>
 
                     <div>
                         <h4>Motorcycle</h4>
-                        <p>Two-Wheel Travel</p>
+                        <p class="text-color">Two-Wheel Travel</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="vehicle-card bicycle-color"
+                    data-vehicle="bicycle">
+
+                    <div class="vehicle-icon">
+                        🚴‍♂️
+                    </div>
+
+                    <div>
+                        <h4>Bicycle</h4>
+                        <p class="text-color">Eco-friendly Ride</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="vehicle-card walking-color"
+                    data-vehicle="walking">
+
+                    <div class="vehicle-icon">
+                        🚶‍♀️
+                    </div>
+
+                    <div>
+                        <h4>Walking</h4>
+                        <p class="text-color">Pedestrian Friendly</p>
                     </div>
 
                 </div>
@@ -119,7 +154,7 @@
             <div class="route-panel">
 
                 <div
-                    class="route-card active"
+                    class="route-card active fastest-color"
                     data-route="fastest">
 
                     <div class="route-icon">
@@ -128,13 +163,13 @@
 
                     <div>
                         <h4>Fastest Route</h4>
-                        <p>Optimized Travel Time</p>
+                        <p class="text-color">Optimized Travel Time</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="route-card"
+                    class="route-card cheapest-color"
                     data-route="cheapest">
 
                     <div class="route-icon">
@@ -143,7 +178,7 @@
 
                     <div>
                         <h4>Cheapest Route</h4>
-                        <p>Fuel Efficient</p>
+                        <p class="text-color">Fuel Efficient</p>
                     </div>
 
                 </div>
@@ -197,13 +232,8 @@
 
     </div>
 
-    <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    <!-- Leaflet Routing Machine -->
-    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-
-    <!-- Custom JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
     <script src="script.js"></script>
 
 </body>
