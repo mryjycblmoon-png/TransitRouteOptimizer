@@ -6,7 +6,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Inter', sans-serif;
 }
 
 html,
@@ -14,7 +14,7 @@ body{
     width:100%;
     height:100%;
     overflow:hidden;
-    background:#f5f7fa;
+    background: linear-gradient(135deg, #eef2ff 0%, #ffffff 45%, #e0f2fe 100%);
 }
 
 /* =====================================
@@ -30,17 +30,21 @@ body{
 .sidebar{
     width:380px;
     min-width:380px;
-    background: linear-gradient(60deg, #E3F2FD, #E3F2FD, #7BA6F7);
-    padding:20px;
+    background: rgba(255,255,255,0.95);
+    padding:24px;
     overflow-y:auto;
-    border-right:1px solid #e5e7eb;
-    box-shadow:2px 0 10px rgba(0,0,0,0.08);
+    border-right:1px solid rgba(15,23,42,0.08);
+    box-shadow: 8px 0 40px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(12px);
     z-index:1000;
+    background: linear-gradient(to top right, #F5F5F5, #E0E0E0, #BDBDBD, #757575);
+
 }
 
 #map{
     flex:1;
     height:100vh;
+    border-left:1px solid rgba(15,23,42,0.08);
 }
 
 /* =====================================
@@ -52,14 +56,17 @@ body{
 }
 
 .logo-section h2{
-    color:#1f2937;
-    margin-bottom:6px;
+    color:#0f172a;
+    margin-bottom:8px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.8rem;
+    letter-spacing:0.02em;
 }
 
 .subtitle{
-    color:#6b7280;
+    color:#475569;
     font-size:14px;
-    line-height:1.4;
+    line-height:1.6;
 }
 
 /* =====================================
@@ -85,8 +92,7 @@ body{
 .search-section input{
     width:100%;
     padding:12px 14px;
-    border:2px solid #4A90E2;
-    box-shadow: 1px 1px 5px #4A90E2;
+    border:2px solid #d1d5db;
     border-radius:10px;
     font-size:14px;
     outline:none;
@@ -158,54 +164,23 @@ body{
     display:flex;
     align-items:center;
     gap:14px;
-    padding:14px;
-    border:2px solid #e5e7eb;
-    border-radius:12px;
+    padding:16px;
+    border:1px solid rgba(15,23,42,0.1);
+    border-radius:16px;
     cursor:pointer;
-    transition:0.2s;
-}
-
-.car-color {
-    background: linear-gradient(135deg, #7BA6F7, #A3B9F7);
-    color: #fff;
-}
-
-.motorcycle-color {
-    background: linear-gradient(135deg, #FF9AA2, #FFD1DC);
-    color: #fff;
-}
-
-.bicycle-color {
-    background: linear-gradient(135deg, #9EE493, #CFFFD0);
-    color: #fff
-}
-
-.walking-color {
-    background: linear-gradient(135deg, #FFD97D, #FFF3B0);
-    color: #fff;
-}
-
-.fastest-color {
-    background: linear-gradient(135deg, #00C9FF, #92FE9D);
-    color: #fff;
-}
-
-.cheapest-color {
-    background: linear-gradient(135deg, #FFB347, #FFD93D);
-    color: #fff;
-}
-
-.text-color {
-    font-weight: bold;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    background:#ffffff;
+    box-shadow: 0 10px 25px rgba(15,23,42,0.04);
 }
 
 .vehicle-card:hover{
-    border-color:#00a884;
+    transform: translateY(-2px);
+    border-color:#38bdf8;
 }
 
 .vehicle-card.active{
-    border-color:#00a884;
-    background:#ecfdf5;
+    border-color:#0284c7;
+    background: rgba(14,165,233,0.08);
 }
 
 .vehicle-icon{
@@ -308,41 +283,96 @@ body{
     gap:10px;
 }
 
+.button-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
 .primary-btn{
     width:100%;
-    padding:14px;
+    padding:16px;
     border:none;
-    border-radius:10px;
-    background: linear-gradient(135deg, #4A90E2, #50E3C2);
+    border-radius:14px;
+    background: linear-gradient(135deg, #000, #9CA3AF);
     color:white;
     font-size:15px;
-    font-weight:600;
+    font-weight:700;
     cursor:pointer;
-    transition:0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(156, 163, 175, 0.6);
 }
 
 .primary-btn:hover{
-    transform:translateY(-1px);
-    opacity:0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 163, 175, 0.4);
 }
 
 .secondary-btn{
     width:100%;
-    padding:14px;
+    padding:16px;
     border:none;
-    border-radius:10px;
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+    border-radius:14px;
+    background: linear-gradient(135deg, #F3F4F6, #000);
     color:white;
     font-size:15px;
-    font-weight:600;
+    font-weight:700;
     cursor:pointer;
-    transition:0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 18px 30px rgba(99,102,241,0.18);
 }
 
 .secondary-btn:hover{
-    transform:translateY(-1px);
-    opacity:0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(209, 213, 219, 0.7);
 }
+
+/* MESSAGES & LOADING */
+.message-box{
+    margin-top:12px;
+    padding:12px;
+    border-radius:10px;
+    background:#fff7ed;
+    border:1px solid #ffedd5;
+    color:#92400e;
+    font-size:13px;
+}
+
+.loading-overlay{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:2000;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:rgba(255,255,255,0.95);
+    padding:14px 18px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(2,6,23,0.2);
+}
+
+.spinner{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    border:4px solid #e6e6e6;
+    border-top-color:#00a884;
+    animation:spin 1s linear infinite;
+}
+
+.loading-text{font-weight:700;color:#0f172a}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Route legend for map */
+.route-legend{position:absolute;right:20px;bottom:20px;background:rgba(255,255,255,0.95);padding:10px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.12);font-size:13px}
+.route-legend .item{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.route-legend .swatch{width:18px;height:8px;border-radius:3px}
+.swatch.best{background:#00a884}
+.swatch.long{background:#ef4444}
+.swatch.traffic{background:#f97316}
 
 /* =====================================
    LEAFLET

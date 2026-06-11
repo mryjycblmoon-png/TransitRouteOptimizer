@@ -85,7 +85,7 @@
             <div class="vehicle-panel">
 
                 <div
-                    class="vehicle-card active car-color"
+                    class="vehicle-card active"
                     data-vehicle="car">
 
                     <div class="vehicle-icon">
@@ -94,13 +94,13 @@
 
                     <div>
                         <h4>Car</h4>
-                        <p class="text-color">Standard Driving</p>
+                        <p>Standard Driving</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="vehicle-card motorcycle-color"
+                    class="vehicle-card"
                     data-vehicle="motorcycle">
 
                     <div class="vehicle-icon">
@@ -109,13 +109,13 @@
 
                     <div>
                         <h4>Motorcycle</h4>
-                        <p class="text-color">Two-Wheel Travel</p>
+                        <p>Two-Wheel Travel</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="vehicle-card bicycle-color"
+                    class="vehicle-card"
                     data-vehicle="bicycle">
 
                     <div class="vehicle-icon">
@@ -124,13 +124,13 @@
 
                     <div>
                         <h4>Bicycle</h4>
-                        <p class="text-color">Eco-friendly Ride</p>
+                        <p>Eco-friendly Ride</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="vehicle-card walking-color"
+                    class="vehicle-card"
                     data-vehicle="walking">
 
                     <div class="vehicle-icon">
@@ -139,7 +139,7 @@
 
                     <div>
                         <h4>Walking</h4>
-                        <p class="text-color">Pedestrian Friendly</p>
+                        <p>Pedestrian Friendly</p>
                     </div>
 
                 </div>
@@ -154,7 +154,7 @@
             <div class="route-panel">
 
                 <div
-                    class="route-card active fastest-color"
+                    class="route-card active"
                     data-route="fastest">
 
                     <div class="route-icon">
@@ -163,22 +163,22 @@
 
                     <div>
                         <h4>Fastest Route</h4>
-                        <p class="text-color">Optimized Travel Time</p>
+                        <p>Optimized Travel Time</p>
                     </div>
 
                 </div>
 
                 <div
-                    class="route-card cheapest-color"
-                    data-route="cheapest">
+                    class="route-card"
+                    data-route="standard">
 
                     <div class="route-icon">
-                        💰
+                        🛣️
                     </div>
 
                     <div>
-                        <h4>Cheapest Route</h4>
-                        <p class="text-color">Fuel Efficient</p>
+                        <h4>Standard Route</h4>
+                        <p>Longer, standard option</p>
                     </div>
 
                 </div>
@@ -204,6 +204,14 @@
 
             </div>
 
+            <!-- MESSAGES -->
+            <div id="messageBox" class="message-box" style="display:none"></div>
+
+            <!-- LOADING -->
+            <div id="loadingOverlay" class="loading-overlay" style="display:none">
+                <div class="spinner"></div>
+                <div class="loading-text">Calculating route...</div>
+            </div>
             <!-- ACTION BUTTONS -->
             <div class="button-group">
 
